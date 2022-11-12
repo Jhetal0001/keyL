@@ -1,0 +1,42 @@
+.header--principal {
+    display: flex;
+    background-color: $color-primario;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #ebebeb;
+    .logo img {
+        align-items: center;
+        width: 100px;
+    }
+}
+
+.nav--header ul {
+    display: flex;
+    padding-top: 20px;
+    li {
+        list-style: none;
+        margin-right: 50px;
+    }
+    a {
+        color: $color-claro;
+        @include titulos($Fuente1)
+    }
+}
+
+.header__busqueda {
+    display: flex;
+    margin-left: auto;
+    padding-top: 35px;
+    &:hover {
+        text-decoration: none;
+    }
+    img {
+        margin-right: 10px;
+    }
+    span {
+        color: $color-claro;
+        @include titulos($Fuente1)
+    }
+}

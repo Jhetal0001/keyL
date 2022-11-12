@@ -1,0 +1,23 @@
+$Fuente1: 'Merriweather', sans-serif;
+$Fuente2: 'Roboto', sans-serif;
+$color-primario: #3092EE;
+$color-claro: #FFFF;
+$color-secundario: #EC7835;
+
+@mixin titulos($fuente) {
+    @if $fuente==$Fuente1 {
+        font-family: $Fuente1;
+    } @else {
+        font-family: $Fuente2;
+        text-transform: uppercase;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    @include titulos($Fuente1);
+}
