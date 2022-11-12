@@ -1,23 +1,14 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&family=Roboto:wght@300&display=swap" rel="stylesheet")
-        link(rel="stylesheet", href="../css/style.css")
-        title Home
-    body 
-        header.header--principal
-            .logo.logo--header: img(src="../images/guitarra.png", alt="Logo-keyl")
-            nav.nav--header: ul
-                    li: a(href="#") Home
-                    li: a(href="#") Store
-                    li: a(href="#") Contact
-                    li: a(href="#") Comment
-            a(href="#" class="header__busqueda")
-                img(src="../images/simbolo-de-la-interfaz-de-busqueda.png", alt="") 
-                span Search
+extend componentes/plantilla.pug
+block contenidos
+    main.contenedor--home
+        +caja--con-fondo-grande ('cyberpunk-2077.jpg', '¡Somos!', 'Nuestra Historia.', 'Somos una compañia creadora de llaveros en porcelana fria, excelente diseños artesanales para adornar sus morrales, llaveros o lo que quieras.')
+        .sidebar--listado
+            h3 Ultimos Comentarios
+            ul
+                +listado-categoria('1','Excelente Servicio, Me agrada su atención')
+                +listado-categoria('2','muy buenos profecionales, y muy buenos productos, la atencion es excelente')
+                +listado-categoria('3','llengan rapido los productos, ademas que su atencion es excelente')
+        +caja--con-fondo-pequena ('caja-store','rdr2.jpg', "Store", 'Vamos a la tienda y ve nuestros productos')
+        +caja--con-fondo-pequena ('caja-contact','ff.jpg', "Contact", 'Deseas una atencion mas personalizada?')
+        +caja--con-fondo-pequena ('caja-comment','ff.jpg', "Comment", 'Deseas dejarnos un comentario?')
 
