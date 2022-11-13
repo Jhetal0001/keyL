@@ -71,7 +71,7 @@
 		object-fit:cover;
 	}
 	&__contenido {
-		padding: 10px;
+		padding: 20px;
 		position: absolute;
 		text-align: center;
 		color: $color-claro;
@@ -117,7 +117,7 @@
 }
 
 .caja--pequena {
-    margin-top: 40px;
+    margin-top: 0px;
 	max-width: 300px;
 	max-height: auto;
     transition: transform 1s;

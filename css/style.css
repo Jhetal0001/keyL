@@ -202,7 +202,7 @@ body {
      object-fit: cover;
 }
 .caja--con-fondo__contenido {
-  padding: 10px;
+  padding: 20px;
   position: absolute;
   text-align: center;
   color: white;
@@ -251,7 +251,7 @@ body {
 }
 
 .caja--pequena {
-  margin-top: 40px;
+  margin-top: 0px;
   max-width: 300px;
   max-height: auto;
   -webkit-transition: -webkit-transform 1s;
@@ -282,6 +282,8 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
 }
 
 .caja--grande {

@@ -18,6 +18,16 @@
     -ms-grid-rows: $rows;
     grid-template-rows: $rows;
   }
+
+  // $column-gap space between columns
+  @mixin grid-column-gap($gap){
+    grid-column-gap: $gap;
+  }
+
+  // $row-gap space between rows
+  @mixin grid-row-gap($gap){
+    grid-row-gap: $gap;
+  }
   
   // Can be used in combination with above grid-template-X mixins.
   // These result in the same output:
