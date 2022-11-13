@@ -1,3 +1,6 @@
+/*$color-primario: #3092EE;
+$color-claro: #FFFF;
+$color-secundario: #EC7835;*/
 h1 {
   font-size: 30px;
   font-family: "Merriweather", sans-serif;
@@ -23,6 +26,7 @@ h3 {
 
 body {
   margin: 0 10px 0 10px;
+  background-color: #3b3e47;
   font-family: "Merriweather", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -33,17 +37,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #3092EE;
+  background-color: #ecd136;
   padding: 0 20px 20px 0px;
   max-width: 100%;
   height: 70px;
   margin: 30px 10px 20px 10px;
-  border-bottom: 1px solid #ebebeb;
   border-radius: 50px;
+}
+.header--principal .logo {
+  height: 100px;
+  margin-top: -15px;
+  background-color: #ecd136;
+  color: #ecd136;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+          box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.header--principal .logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 .header--principal .logo img {
   width: 100px;
-  margin-top: -15px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .nav--header ul {
@@ -68,7 +89,7 @@ body {
   text-decoration: none;
 }
 .nav--header ul a {
-  color: white;
+  color: #2c2c2c;
   font-family: "Merriweather", sans-serif;
 }
 
@@ -95,14 +116,14 @@ body {
 .header__busqueda i {
   margin-right: 10px;
   font-size: 20px;
-  color: white;
+  color: #2c2c2c;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .header__busqueda span {
-  color: white;
+  color: #2c2c2c;
   font-family: "Merriweather", sans-serif;
 }
 
@@ -137,7 +158,7 @@ body {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
-  color: #3092EE;
+  color: #ecd136;
   -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
           box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
 }
@@ -152,11 +173,11 @@ body {
 }
 .caja__contenido {
   padding: 25px;
-  background-color: white;
+  background-color: #3b3e47;
   border-radius: 0 0 50px 50px;
 }
 .caja__categoria {
-  color: #3092EE;
+  color: #ecd136;
   font-family: "Merriweather", sans-serif;
 }
 
@@ -164,8 +185,8 @@ body {
   width: 100px;
   height: 40px;
   border-radius: 20px;
-  background-color: #EC7835;
-  color: white;
+  background-color: #ebebeb;
+  color: #2c2c2c;
   border: none;
   font-family: "Merriweather", sans-serif;
 }
@@ -189,7 +210,7 @@ body {
           box-shadow: none;
   position: relative;
   overflow: hidden;
-  background-color: #3092EE;
+  background-color: #ecd136;
   border-radius: 50px;
 }
 .caja--con-fondo img {
@@ -205,14 +226,14 @@ body {
   padding: 20px;
   position: absolute;
   text-align: center;
-  color: white;
+  color: #2c2c2c;
 }
 .caja--con-fondo__contenido button {
   width: 100px;
   height: 40px;
   border-radius: 20px;
-  background-color: #EC7835;
-  color: white;
+  background-color: #ebebeb;
+  color: #2c2c2c;
   border: none;
   font-family: "Merriweather", sans-serif;
   font-size: 16px;
@@ -220,7 +241,7 @@ body {
   line-height: 1.5rem;
 }
 .caja--con-fondo__contenido h3 {
-  color: white;
+  color: #2c2c2c;
 }
 .caja--con-fondo__categoria {
   display: block;
@@ -228,8 +249,8 @@ body {
   max-width: 100px;
   margin: 0 auto;
   text-align: center;
-  background-color: #EC7835;
-  color: white;
+  background-color: #ebebeb;
+  color: #2c2c2c;
   font-family: "Merriweather", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -336,7 +357,7 @@ body {
   padding: 20px;
   height: 100%;
   border-radius: 50px;
-  color: #3092EE;
+  color: #ecd136;
   -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
           box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
 }
@@ -358,28 +379,45 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 10px 20px;
-  color: #3092EE;
+  color: #ecd136;
 }
 .sidebar--listado__numero {
   margin-right: 20px;
-  color: rgba(48, 146, 238, 0.5);
+  color: rgba(236, 209, 54, 0.5);
 }
 
 .footer--principal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #3092EE;
+  background-color: #ecd136;
   padding: 0 20px 20px 0px;
   max-width: 100%;
   height: 70px;
   margin: 30px 10px 20px 10px;
-  border-bottom: 1px solid #ebebeb;
   border-radius: 50px;
+}
+.footer--principal .logo {
+  height: 100px;
+  margin-top: -15px;
+  background-color: #ecd136;
+  color: #ecd136;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+          box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.footer--principal .logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 .footer--principal .logo img {
   width: 100px;
-  margin-top: -15%;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .nav--footer ul {
@@ -404,7 +442,7 @@ body {
   text-decoration: none;
 }
 .nav--footer ul a {
-  color: white;
+  color: #2c2c2c;
   font-family: "Merriweather", sans-serif;
 }
 
@@ -423,10 +461,10 @@ body {
 .nav--social li {
   list-style: none;
   margin-right: 20px;
-  color: white;
+  color: #2c2c2c;
 }
 .nav--social a {
-  color: white;
+  color: #2c2c2c;
   font-family: "Merriweather", sans-serif;
 }
 .nav--social a .fab {

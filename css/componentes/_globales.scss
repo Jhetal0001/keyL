@@ -1,8 +1,12 @@
 $Fuente1: 'Merriweather', sans-serif;
 $Fuente2: 'Roboto', sans-serif;
-$color-primario: #3092EE;
+/*$color-primario: #3092EE;
 $color-claro: #FFFF;
-$color-secundario: #EC7835;
+$color-secundario: #EC7835;*/
+$color-primario: #ecd136;
+$color-claro: #2c2c2c;
+$color-secundario: #ebebeb;
+$color-tema: #3b3e47;
 
 @mixin caja {
 	color: $color-primario;
@@ -46,6 +50,7 @@ $color-secundario: #EC7835;
 
 body {
     margin: 0 10px 0 10px;
+    background-color: $color-tema;
     @include titulos($Fuente1);
     @include font-size(16px);
 }
