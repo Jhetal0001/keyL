@@ -1,15 +1,48 @@
 .contenedor--cajas {
-	max-width: 1400px;
-	margin: 0 auto;
+	max-width: 100%;
+	margin: 5% auto;
 	display: flex;
 	justify-content: space-evenly;
+    .caja-flecha img {
+        margin: 150% auto;
+        height: 100px;
+        transition: transform 1s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 .caja {
-	max-width: 430px;
+	max-width: 250px;
+    text-align: center;
+    border-radius: 50px;
+    transition: transform 1s;
+    @include caja;
+    &:hover {
+        transform: scale(1.1);
+    }
+    img {
+        border-radius: 50px 50px 0 0;
+        width: 100%;
+        height: 175px;
+    }
+	&__contenido {
+		padding: 25px;
+		background-color: $color-claro;
+        border-radius: 0 0 50px 50px;
+	}
+	&__categoria {
+		color: $color-primario;
+		@include titulos($Fuente1);
+	}
 }
-.contenedor--cajas .caja a {
-	text-decoration: none;	
+.contenedor--cajas .caja button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: $color-secundario;
 	color: $color-claro;
+    border: none;
 	@include titulos($Fuente1);
 }
 
@@ -28,21 +61,29 @@
 	position: relative;
 	overflow: hidden;
 	background-color: $color-primario;
+    border-radius: 50px;
 	img {
 		display: block;
-		max-width: 100%;
-		max-height: auto;
+		width: 100%;
+		height: 100%;
 		position: absolute;
-		opacity: .5;
-		object-fit: contain;
+		opacity: .3;
+		object-fit:cover;
 	}
 	&__contenido {
-		padding: 20px;
+		padding: 10px;
 		position: absolute;
 		text-align: center;
 		color: $color-claro;
-		p {
-			color: $color-claro;
+		button {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: $color-secundario;
+            color: $color-claro;
+            border: none;
+            @include titulos($Fuente1);
+			@include font-size(16px);
 		}
 		h3 {
 			color: $color-claro;
@@ -57,18 +98,16 @@
 		background-color: $color-secundario;
 		color: $color-claro;
 		@include titulos($Fuente1);
+		@include font-size(16px);
 	}
 }
 
 .caja--grande {
-	max-width: 1000px;
-	height: 550px;
+	max-width: 100%;
+	height: 100%;
 	margin-right: 20px;
-	h2 {
-		@include titulos($Fuente1);
-	}
 	.caja--con-fondo__contenido {
-		padding-top: 200px;
+		padding-top: 130px;
 	}
 }
 
@@ -78,6 +117,11 @@
 }
 
 .caja--pequena {
+    margin-top: 40px;
 	max-width: 300px;
-	height: 250px;
+	max-height: auto;
+    transition: transform 1s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }

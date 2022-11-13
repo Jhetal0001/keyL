@@ -1,11 +1,32 @@
+h1 {
+  font-size: 30px;
+  font-family: "Merriweather", sans-serif;
+  margin: 30px 0;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Merriweather", sans-serif;
+  margin: 30px 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "Merriweather", sans-serif;
+  margin: 30px 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: 0 10px 0 10px;
   font-family: "Merriweather", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .header--principal {
@@ -13,28 +34,38 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #3092EE;
-  padding: 0 20px 20px 20px;
-  margin-bottom: 15px;
-  width: 100%;
-  height: 80px;
+  padding: 0 20px 20px 0px;
+  max-width: 100%;
+  height: 70px;
+  margin: 30px 10px 20px 10px;
   border-bottom: 1px solid #ebebeb;
+  border-radius: 50px;
 }
 .header--principal .logo img {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100px;
+  margin-top: -15px;
 }
 
 .nav--header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .nav--header ul li {
   list-style: none;
   margin-right: 50px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.nav--header ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.nav--header ul li:hover a {
+  text-decoration: none;
 }
 .nav--header ul a {
   color: white;
@@ -46,13 +77,29 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  padding-top: 35px;
+  padding: 25px 20px 0px 20px;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .header__busqueda:hover {
-  text-decoration: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
-.header__busqueda img {
+.header__busqueda:hover i {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+.header__busqueda i {
   margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .header__busqueda span {
   color: white;
@@ -60,8 +107,8 @@ body {
 }
 
 .contenedor--cajas {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 5% auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,14 +116,57 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-
-.caja {
-  max-width: 430px;
+.contenedor--cajas .caja-flecha img {
+  margin: 150% auto;
+  height: 100px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.contenedor--cajas .caja-flecha img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-.contenedor--cajas .caja a {
-  text-decoration: none;
+.caja {
+  max-width: 250px;
+  text-align: center;
+  border-radius: 50px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  color: #3092EE;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+          box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+}
+.caja:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.caja img {
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  height: 175px;
+}
+.caja__contenido {
+  padding: 25px;
+  background-color: white;
+  border-radius: 0 0 50px 50px;
+}
+.caja__categoria {
+  color: #3092EE;
+  font-family: "Merriweather", sans-serif;
+}
+
+.contenedor--cajas .caja button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #EC7835;
   color: white;
+  border: none;
   font-family: "Merriweather", sans-serif;
 }
 
@@ -100,24 +190,34 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #3092EE;
+  border-radius: 50px;
 }
 .caja--con-fondo img {
   display: block;
-  max-width: 100%;
-  max-height: auto;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  opacity: 0.5;
-  -o-object-fit: contain;
-     object-fit: contain;
+  opacity: 0.3;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .caja--con-fondo__contenido {
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   text-align: center;
   color: white;
 }
-.caja--con-fondo__contenido p {
+.caja--con-fondo__contenido button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #EC7835;
   color: white;
+  border: none;
+  font-family: "Merriweather", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .caja--con-fondo__contenido h3 {
   color: white;
@@ -131,18 +231,18 @@ body {
   background-color: #EC7835;
   color: white;
   font-family: "Merriweather", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .caja--grande {
-  max-width: 1000px;
-  height: 550px;
+  max-width: 100%;
+  height: 100%;
   margin-right: 20px;
 }
-.caja--grande h2 {
-  font-family: "Merriweather", sans-serif;
-}
 .caja--grande .caja--con-fondo__contenido {
-  padding-top: 200px;
+  padding-top: 130px;
 }
 
 .caja--mediana {
@@ -151,8 +251,17 @@ body {
 }
 
 .caja--pequena {
+  margin-top: 40px;
   max-width: 300px;
-  height: 250px;
+  max-height: auto;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.caja--pequena:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .contenedor--home {
@@ -164,9 +273,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 1200px;
-  width: 1300px;
-  margin: 0 auto;
+  height: auto;
+  margin: auto 10px;
+  padding: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -186,8 +295,8 @@ body {
 
 .sidebar--listado {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  grid-row: 1/4;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
@@ -197,25 +306,135 @@ body {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 1/2;
+  grid-column: 2/3;
 }
 
 .caja-contact {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   -ms-grid-column-span: 1;
-  grid-column: 2/3;
+  grid-column: 3/4;
 }
 
 .caja-comment {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   -ms-grid-column-span: 1;
-  grid-column: 3/4;
+  grid-column: 4/5;
+}
+
+.sidebar--listado {
+  max-width: 300px;
+  padding: 20px;
+  height: 100%;
+  border-radius: 50px;
+  color: #3092EE;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+          box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+}
+.sidebar--listado h3 {
+  font-family: "Merriweather", sans-serif;
+}
+.sidebar--listado ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar--listado li {
+  padding: 10px 0;
+  margin: 10px 0;
+  border-top: 1px solid #ccc;
+  list-style: none;
+}
+.sidebar--listado a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  color: #3092EE;
+}
+.sidebar--listado__numero {
+  margin-right: 20px;
+  color: rgba(48, 146, 238, 0.5);
+}
+
+.footer--principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3092EE;
+  padding: 0 20px 20px 0px;
+  max-width: 100%;
+  height: 70px;
+  margin: 30px 10px 20px 10px;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 50px;
+}
+.footer--principal .logo img {
+  width: 100px;
+  margin-top: -15%;
+}
+
+.nav--footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+.nav--footer ul li {
+  list-style: none;
+  margin-right: 50px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.nav--footer ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.nav--footer ul li:hover a {
+  text-decoration: none;
+}
+.nav--footer ul a {
+  color: white;
+  font-family: "Merriweather", sans-serif;
+}
+
+.nav--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+.nav--social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+.nav--social li {
+  list-style: none;
+  margin-right: 20px;
+  color: white;
+}
+.nav--social a {
+  color: white;
+  font-family: "Merriweather", sans-serif;
+}
+.nav--social a .fab {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  font-size: 20px;
+}
+.nav--social a .fab:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }

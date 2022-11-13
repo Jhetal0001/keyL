@@ -9,6 +9,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&amp;family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
       <link rel="stylesheet" href="../css/style.css">
+      <script src="https://kit.fontawesome.com/552ebddad2.js"></script>
       <title>Home</title>
     </head>
     <body> </body>
@@ -23,10 +24,10 @@
           <li><a href="#">Contact</a></li>
           <li><a href="#">Comment</a></li>
         </ul>
-      </nav><a class="header__busqueda" href="#"><img src="../images/simbolo-de-la-interfaz-de-busqueda.png" alt=""><span>Search</span></a>
+      </nav><a class="header__busqueda" href="#"><i class="fas fa-search"> </i><span>Search</span></a>
     </header>
     <main class="contenedor--home"><a class="caja--con-fondo caja--grande">
-          <div class="caja__imagen"><img src=""></div>
+          <div class="caja__imagen"><img src="../images/FondoRegalos.jpg"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">¡Somos!</span>
             <h2>Nuestra Historia.</h2>
             <p>Somos una compañia creadora de llaveros en porcelana fria, excelente diseños artesanales para adornar sus morrales, llaveros o lo que quieras.</p>
@@ -34,23 +35,79 @@
       <div class="sidebar--listado">
         <h3>Ultimos Comentarios</h3>
         <ul>
-            <li><a href="#"><span class="sidebar--listado__numero">1</span><span class="sidebar--listado__titulo">Excelente Servicio, Me agrada su atención</span></a></li>
-            <li><a href="#"><span class="sidebar--listado__numero">2</span><span class="sidebar--listado__titulo">muy buenos profecionales, y muy buenos productos, la atencion es excelente</span></a></li>
-            <li><a href="#"><span class="sidebar--listado__numero">3</span><span class="sidebar--listado__titulo">llengan rapido los productos, ademas que su atencion es excelente</span></a></li>
+            <li><a href="#"><span class="sidebar--listado__numero">1. </span><span class="sidebar--listado__titulo">Excelente Servicio, Me agrada su atención</span></a></li>
+            <li><a href="#"><span class="sidebar--listado__numero">2. </span><span class="sidebar--listado__titulo">muy buenos profecionales, y muy buenos productos, la atencion es excelente</span></a></li>
+            <li><a href="#"><span class="sidebar--listado__numero">3. </span><span class="sidebar--listado__titulo">llengan rapido los productos, ademas que su atencion es excelente</span></a></li>
         </ul>
-      </div><a class="caja--con-fondo caja--pequena caja-store">
-          <div class="caja__imagen"><img src="../images/rdr2.jpg"></div>
+      </div><a class="caja--con-fondo caja--pequena caja-galeria">
+          <div class="caja__imagen"><img src="../images/fondoComment.jpeg"></div>
+          <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Galery</span>
+            <h2>Deseas un nuevo diseño?</h2>
+            <button>Clic here!</button>
+          </div></a><a class="caja--con-fondo caja--pequena caja-store">
+          <div class="caja__imagen"><img src="../images/fondoStore.png"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Store</span>
             <h2>Vamos a la tienda y ve nuestros productos</h2>
+            <button>Clic here!</button>
           </div></a><a class="caja--con-fondo caja--pequena caja-contact">
-          <div class="caja__imagen"><img src="../images/ff.jpg"></div>
+          <div class="caja__imagen"><img src="../images/fondoContact.jpg"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Contact</span>
             <h2>Deseas una atencion mas personalizada?</h2>
+            <button>Clic here!</button>
           </div></a><a class="caja--con-fondo caja--pequena caja-comment">
-          <div class="caja__imagen"><img src="../images/ff.jpg"></div>
+          <div class="caja__imagen"><img src="../images/fondoComment.jpeg"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Comment</span>
             <h2>Deseas dejarnos un comentario?</h2>
+            <button>Clic here!</button>
           </div></a>
     </main>
+    <section class="contenedor--cajas">
+      <div class="caja-flecha"><img src="../images/flecha-left.png"></div>
+        <div class="caja">
+          <div class="caja__imagen"><img src="../images/imagen1.jpg"></div>
+          <div class="caja__contenido"><span class="caja__categoria">Huellas</span>
+            <h3>$ 5.000 COP</h3>
+            <p>Hermoso llavero de porcelanicron, nuevos diseños y atractivos</p>
+            <button>Comprar	</button>
+          </div>
+        </div>
+        <div class="caja">
+          <div class="caja__imagen"><img src="../images/imagen2.jpg"></div>
+          <div class="caja__contenido"><span class="caja__categoria">Matrimonio</span>
+            <h3>$ 5.000 COP</h3>
+            <p>Hermoso llavero de porcelanicron, nuevos diseños y atractivos</p>
+            <button>Comprar	</button>
+          </div>
+        </div>
+        <div class="caja">
+          <div class="caja__imagen"><img src="../images/imagen3.jpg"></div>
+          <div class="caja__contenido"><span class="caja__categoria">Buhos</span>
+            <h3>$ 5.000 COP</h3>
+            <p>Hermoso llavero de porcelanicron, nuevos diseños y atractivos</p>
+            <button>Comprar	</button>
+          </div>
+        </div>
+      <div class="caja-flecha"><img src="../images/flecha-rigth.png"></div>
+    </section>
+    <footer class="footer--principal">
+      <div class="logo logo--footer"><img src="/images/guitarra.png" alt="Logo-keyl"></div>
+      <nav class="nav--footer">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Comment</a></li>
+        </ul>
+      </nav>
+      <div class="nav--social">
+        <ul>
+          <li>Siguenos</li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

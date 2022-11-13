@@ -1,14 +1,20 @@
 extend componentes/plantilla.pug
 block contenidos
     main.contenedor--home
-        +caja--con-fondo-grande ('cyberpunk-2077.jpg', '¡Somos!', 'Nuestra Historia.', 'Somos una compañia creadora de llaveros en porcelana fria, excelente diseños artesanales para adornar sus morrales, llaveros o lo que quieras.')
+        +caja--con-fondo-grande('FondoRegalos.jpg', '¡Somos!', 'Nuestra Historia.', 'Somos una compañia creadora de llaveros en porcelana fria, excelente diseños artesanales para adornar sus morrales, llaveros o lo que quieras.')
         .sidebar--listado
             h3 Ultimos Comentarios
             ul
-                +listado-categoria('1','Excelente Servicio, Me agrada su atención')
-                +listado-categoria('2','muy buenos profecionales, y muy buenos productos, la atencion es excelente')
-                +listado-categoria('3','llengan rapido los productos, ademas que su atencion es excelente')
-        +caja--con-fondo-pequena ('caja-store','rdr2.jpg', "Store", 'Vamos a la tienda y ve nuestros productos')
-        +caja--con-fondo-pequena ('caja-contact','ff.jpg', "Contact", 'Deseas una atencion mas personalizada?')
-        +caja--con-fondo-pequena ('caja-comment','ff.jpg', "Comment", 'Deseas dejarnos un comentario?')
-
+                +listado-categoria('1. ','Excelente Servicio, Me agrada su atención')
+                +listado-categoria('2. ','muy buenos profecionales, y muy buenos productos, la atencion es excelente')
+                +listado-categoria('3. ','llengan rapido los productos, ademas que su atencion es excelente')
+        +caja--con-fondo-pequena('caja-galeria','fondoComment.jpeg', "Galery", 'Deseas un nuevo diseño?')
+        +caja--con-fondo-pequena('caja-store','fondoStore.png', "Store", 'Vamos a la tienda y ve nuestros productos')
+        +caja--con-fondo-pequena('caja-contact','fondoContact.jpg', "Contact", 'Deseas una atencion mas personalizada?')
+        +caja--con-fondo-pequena('caja-comment','fondoComment.jpeg', "Comment", 'Deseas dejarnos un comentario?')
+    section.contenedor--cajas
+        .caja-flecha: img(src="../images/flecha-left.png")
+        +caja("imagen1.jpg", "Huellas", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
+        +caja("imagen2.jpg", "Matrimonio", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
+        +caja("imagen3.jpg", "Buhos", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
+        .caja-flecha: img(src="../images/flecha-rigth.png")
