@@ -14,8 +14,8 @@ mixin caja--con-fondo-pequena(clase, imagen, categoria, titulo, contenido)
             h2=titulo
             button Clic here!
 
-mixin caja(imagen, categoria, titulo, contenido)
-    .caja
+mixin caja(id, imagen, categoria, titulo, contenido)
+    .caja(id=+id)
         .caja__imagen: img(src="../images/"+imagen)
         .caja__contenido
             span.caja__categoria=categoria

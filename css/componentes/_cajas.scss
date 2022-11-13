@@ -1,24 +1,67 @@
-.contenedor--cajas {
-	max-width: 100%;
-	margin: 5% auto;
+.slide {
 	display: flex;
-	justify-content: space-evenly;
-    .caja-flecha img {
-        margin: 150% auto;
-        height: 100px;
-        transition: transform 1s;
-        &:hover {
-            transform: scale(1.2);
-        }
-    }
 }
+//Estilos caja padre de las cajas de los productos
+.contenedor--cajas {
+	max-width: 90%;
+	padding: 70px 300px;
+	margin: 0 auto;
+	display: flex;
+	overflow-y: visible;
+	overflow-x: scroll;
+    overscroll-behavior-x: contain;
+	scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+	z-index: 1;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+.caja-flecha {
+	display: flex;
+	align-items: center;
+	width: 30%;
+	z-index: 2;
+	img {
+		height: 100px;
+		z-index: 2;
+		transition: transform 1s;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
+.flecha__left {
+	position: absolute;
+	left: 15px;
+	height: 100%;
+	background: linear-gradient(90deg, $color-tema 25%,
+				rgba(56,62,77,0.8) 70%, rgba(56,62,77,0.6) 80%, 
+				rgba(56,62,77,0.4) 90%, rgba(56,62,77,0.0) 100%);
+}
+.flecha__right {
+	position: absolute;
+	right: 15px;
+	height: 100%;
+	background: linear-gradient(270deg, $color-tema 25%,
+				rgba(56,62,77,0.8) 70%, rgba(56,62,77,0.6) 80%, 
+				rgba(56,62,77,0.4) 90%, rgba(56,62,77,0.0) 100%);
+	img {
+		margin-left: 300px;
+	}
+}
+//Estilos cajas de productos
 .caja {
-	max-width: 250px;
+	width: 450px;
+	min-width: 300px;
     text-align: center;
-    border-radius: 50px;
+	scroll-snap-align: center;
     transition: transform 1s;
+	margin-left: 50px;
+	margin-right: 50px;
+	z-index: 1;
     @include caja;
-    &:hover {
+    &:focus {
         transform: scale(1.1);
     }
     img {
@@ -30,22 +73,21 @@
 		padding: 25px;
 		background-color: $color-tema;
         border-radius: 0 0 50px 50px;
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+    	align-items: center;
 	}
 	&__categoria {
 		color: $color-primario;
 		@include titulos($Fuente1);
 	}
 }
+//Estilos botones
 .contenedor--cajas .caja button {
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: $color-secundario;
-	color: $color-claro;
-    border: none;
-	@include titulos($Fuente1);
+    @include button;
 }
-
+//Estilos contenido de la pagina principal
 .contenido {
 	margin-bottom: 40px;
 	justify-content: space-evenly;
@@ -54,7 +96,7 @@
 	margin: 0 auto;
 	padding: 30px 0;
 } 
-
+//Estilos fondo de todas las cajas y su contenido
 .caja--con-fondo {
 	display: block;
 	box-shadow: none;
@@ -71,19 +113,17 @@
 		object-fit:cover;
 	}
 	&__contenido {
+		display: flex;
+		flex-direction: column;
+    	justify-content: space-between;
+    	align-items: center;
+		height: 100%;
 		padding: 20px;
 		position: absolute;
 		text-align: center;
 		color: $color-claro;
 		button {
-            width: 100px;
-            height: 40px;
-            border-radius: 20px;
-            background-color: $color-secundario;
-            color: $color-claro;
-            border: none;
-            @include titulos($Fuente1);
-			@include font-size(16px);
+            @include button;
 		}
 		h3 {
 			color: $color-claro;
@@ -101,27 +141,28 @@
 		@include font-size(16px);
 	}
 }
-
+//Estilos caja grande y fondo de la caja
 .caja--grande {
 	max-width: 100%;
 	height: 100%;
 	margin-right: 20px;
 	.caja--con-fondo__contenido {
-		padding-top: 130px;
+		padding: 150px 100px 200px;
 	}
 }
-
+//Estilos caja mediana y fondo de la caja
 .caja--mediana {
 	max-width: 600px;
 	height: 250px;
 }
-
+//Estilos caja pequeña y fondo de la caja
 .caja--pequena {
     margin-top: 0px;
 	max-width: 300px;
 	max-height: auto;
-    transition: transform 1s;
+    transition: transform 0.7s, box-shadow 0.7s;
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
+		@include caja;
     }
 }

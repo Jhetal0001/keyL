@@ -21,6 +21,7 @@
         transform: scale(0.7);
         }
     }
+    @include caja;
 }
 
 .nav--footer ul {

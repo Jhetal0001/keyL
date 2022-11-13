@@ -1,16 +1,33 @@
+//Variables
 $Fuente1: 'Merriweather', sans-serif;
 $Fuente2: 'Roboto', sans-serif;
 /*$color-primario: #3092EE;
 $color-claro: #FFFF;
 $color-secundario: #EC7835;*/
-$color-primario: #ecd136;
-$color-claro: #2c2c2c;
-$color-secundario: #ebebeb;
-$color-tema: #3b3e47;
+$color-primario: rgb(36, 121, 201);
+$color-claro: #ffffff;
+$color-secundario: #EC7835;
+$color-tema: #383e4d;
 
+//Mixin
+@mixin button {
+    width: 100px;
+    height: 40px;
+    background-color: $color-secundario;
+    color: $color-claro;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 1px;
+    @include titulos($Fuente1);
+    &:hover {
+		box-shadow: 0.2px 0.5px 5px #ffca98;
+	}
+}
 @mixin caja {
 	color: $color-primario;
-	box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.534);
+    border-radius: 50px;
+    box-shadow:  5px 5px 21px #13365f,
+             -2px -2px 21px #b1efff;
 }
 
 @mixin titulos($fuente) {
@@ -21,18 +38,18 @@ $color-tema: #3b3e47;
         text-transform: uppercase;
     }
 }
-
+//Funcion tamaño rem para la fuentes
 @function calculadoraRem($size) {
 	$remSize: $size / 16px;
 	@return $remSize * 1rem;
 }
-
+// Tamaño de fuentes
 @mixin font-size($size) {
 	font-size: $size;
 	font-size: calculadoraRem($size);
 	line-height: calculadoraRem($size)*1.5;
 }
-
+// Funcion para dar opacidad 
 @function get-opacity($color, $amount) {
     @return rgba($color, $amount);
   }
@@ -43,7 +60,7 @@ $color-tema: #3b3e47;
           margin: 30px 0;
     }
   }
-
+//Reseteo globales
 * {
     box-sizing: border-box;
 }

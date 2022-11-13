@@ -1,3 +1,4 @@
+//Estilos header de navegación
 .header--principal {
     display: flex;
     background-color: $color-primario;
@@ -21,8 +22,9 @@
         transform: scale(0.7);
         }
     }
+    @include caja;
 }
-
+//Estilos barra de navegacion
 .nav--header ul {
     display: flex;
     padding-top: 10px;
@@ -42,7 +44,7 @@
         @include titulos($Fuente1)
     }
 }
-
+//Estilos barra de busqueda
 .header__busqueda {
     display: flex;
     margin-left: auto;

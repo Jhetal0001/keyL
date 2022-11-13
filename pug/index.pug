@@ -12,9 +12,10 @@ block contenidos
         +caja--con-fondo-pequena('caja-store','fondoStore.png', "Store", 'Vamos a la tienda y ve nuestros productos')
         +caja--con-fondo-pequena('caja-contact','fondoContact.jpg', "Contact", 'Deseas una atencion mas personalizada?')
         +caja--con-fondo-pequena('caja-comment','fondoComment.jpeg', "Comment", 'Deseas dejarnos un comentario?')
-    section.contenedor--cajas
-        .caja-flecha: img(src="../images/flecha-left.png")
-        +caja("imagen1.jpg", "Huellas", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
-        +caja("imagen2.jpg", "Matrimonio", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
-        +caja("imagen3.jpg", "Buhos", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
-        .caja-flecha: img(src="../images/flecha-rigth.png")
+    .slide
+        .caja-flecha.flecha__left: img(src="../images/flecha-left.png")
+        section.contenedor--cajas
+            +caja("1","imagen1.jpg", "Huellas", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
+            +caja("2","imagen2.jpg", "Matrimonio", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
+            +caja("3","imagen3.jpg", "Buhos", "$ 5.000 COP", "Hermoso llavero de porcelanicron, nuevos diseños y atractivos")
+        .caja-flecha.flecha__right: img(src="../images/flecha-rigth.png")
