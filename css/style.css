@@ -216,7 +216,7 @@ body {
   -webkit-box-shadow: 5px 5px 21px #13365f, -2px -2px 21px #b1efff;
           box-shadow: 5px 5px 21px #13365f, -2px -2px 21px #b1efff;
 }
-.caja:focus {
+.caja:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
