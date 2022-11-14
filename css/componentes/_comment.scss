@@ -1,0 +1,108 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    & h1 {
+        @include titulos($Fuente1);
+        color: $color-claro;
+        align-self: start;
+        margin: 20px 0 20px 40px;
+    }
+}
+
+.comment__input {
+    width: 80%;
+    margin-top: 50px;
+    box-shadow: -6px -25px 19px -26px rgba(0,0,0,0.75);
+    padding: 30px 0;
+    & form {
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            & li {
+                list-style: none;
+                input {
+                    @include form;
+                }
+                & > textarea {
+                    width: 900px;
+                    height: 100px;
+                    margin: 20px;
+                    background-color: $color-tema;
+                    border: none;
+                    outline: none;
+                    color: $color-fuente-oscuro;
+                    padding: 20px 50px;
+                    @include titulos($Fuente1);
+                    @include font-size(16px);
+                    @include caja;
+                    &:focus {
+                        border: 2px solid $color-fuente-oscuro;
+                        background-color: #2c313d ; 
+                    }
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+            }
+            & > button {
+                margin-top: 15px;
+                @include button;
+            }
+        }
+    }
+}
+
+.comment__before {
+    width: 80%;
+    margin-top: 20px;
+    box-shadow: -6px -25px 19px -26px rgba(0,0,0,0.75);
+    padding: 30px 0;
+    h3 {
+        @include titulos($Fuente1);
+        color: $color-fuente-claro;
+    }
+    &--history {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 80px;
+        max-height: 200px;
+        background-color: #2c313d;
+        @include caja;
+        &-div {
+            overflow-y: scroll;
+            overscroll-behavior-y: contain;
+            scroll-behavior: smooth;
+            scroll-snap-type:y mandatory;
+            padding: 0 20px;
+            li {
+                list-style: none;
+                margin: 10px 0;
+                border-bottom: 1px solid rgb(80, 80, 80);
+                a {
+                text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+.comment__before--history-div::-webkit-scrollbar {
+	width: 10px;
+}
+.comment__before--history-div::-webkit-scrollbar-thumb {
+    background-color: #242933;
+	border-radius: 50px;
+    &:hover {
+        background-color: #23252b;
+    }
+}
+
+.comment__before--history-div::-webkit-scrollbar-track {
+	border-radius: 50px;
+    background-color: #3d4455;
+}

@@ -6,13 +6,13 @@ mixin caja--con-fondo-grande(imagen, categoria, titulo, contenido)
             h2=titulo
             p=contenido
 
-mixin caja--con-fondo-pequena(clase, imagen, categoria, titulo, contenido)
+mixin caja--con-fondo-pequena(clase, imagen, categoria, titulo, contenido, link)
     a(class="caja--con-fondo caja--pequena " + clase)
         .caja__imagen: img(src="../images/"+imagen)
         .caja--con-fondo__contenido
             span.caja--con-fondo__categoria=categoria
             h2=titulo
-            button Clic here!
+            button(onclick="location.href='"+link+"';") Clic here!
 
 mixin caja(id, imagen, categoria, titulo, contenido)
     .caja(id=+id)

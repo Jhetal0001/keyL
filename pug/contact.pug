@@ -1,0 +1,21 @@
+extend componentes/plantilla.pug
+block contenidos
+    main.contact
+        section.contact__keyl
+            .logo.logo--footer: img(src="/images/llavero.png", alt="Logo-keyl")
+            h2.contact__keyl--nombre KeyL
+            h3.contact__keyl--titulo Contactanos
+        aside.contact__datos
+            .contact__datos--boton.one
+                img(src="/images/whatsapp.png")
+                .link: a(href="#") Whatsapp: 
+                    b +57 3195493430
+            .contact__datos--boton.two
+                img(src="/images/phone.png")
+                .link: a(href="#") Telefono:  
+                    b 3195493430
+            .contact__datos--boton.three
+                img(src="/images/email.png")
+                .link: a(href="#") Email: 
+                    b micorreo@keyl.com.co
+

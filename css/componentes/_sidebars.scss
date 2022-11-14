@@ -21,9 +21,10 @@
         display: flex;
         padding: 10px 20px;
         color: $color-primario;
+        text-decoration: none;
     }
     &__numero {
         margin-right: 20px;
-        color: get-opacity($color-primario, .5);
+        color: get-opacity($color-fuente-claro, .9);
     }
 }
