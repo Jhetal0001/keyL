@@ -28,8 +28,7 @@
                     @include form;
                 }
                 & > textarea {
-                    max-width: 900px;
-                    width: 100%;
+                    width: 900px;
                     height: 100px;
                     margin: 20px;
                     background-color: $color-tema;

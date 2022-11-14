@@ -1,10 +1,8 @@
 .sidebar--listado {
-    max-width: 100%;
+    max-width: 300px;
     padding: 20px;
+    height: 100%;
     border-radius: 50px;
-    margin: 0 10px 0 0;
-    display: flex;
-    flex-direction: column;
     @include caja();
     h3 {
         @include titulos($Fuente1);
@@ -12,9 +10,6 @@
     ul {
         margin: 0;
         padding: 0;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
     }
     li {
         padding: 10px 0;

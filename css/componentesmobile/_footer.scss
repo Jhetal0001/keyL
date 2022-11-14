@@ -1,10 +1,10 @@
 .footer--principal {
     display: flex;
     background-color: $color-primario;
+    padding: 0 20px 20px 0px;
     max-width: 100%;
     height: 70px;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin: 30px 10px 20px 10px;
     border-radius: 50px;
     .logo {
         height: 100px;
@@ -24,46 +24,35 @@
     @include caja;
 }
 
-.nav--footer {
-    width: 50%;
+.nav--footer ul {
     display: flex;
-    align-items: center;
-    ul{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 0;
-        li {
-            list-style: none;
-            transition: transform 0.2s;
-            &:hover {
-                transform: scale(1.2);
-                a {
-                    text-decoration: none;
-                }
+    padding-top: 10px;
+    li {
+        list-style: none;
+        margin-right: 50px;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.2);
+            a {
+                text-decoration: none;
             }
         }
-        a {
-            color: $color-claro;
-            @include titulos($Fuente1);
-        }
+    }
+    a {
+        color: $color-claro;
+        @include titulos($Fuente1);
     }
 }
 .nav--social {
-    width: 30%;
-    display: flex;
-    margin-left: auto;
-    align-items: center;
-    margin-right: 30px;
-    ul {
-        width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        padding: 0;
+        margin-left: auto;
+    ul {
+        display: flex;
+        padding-top: 10px;
     }
     li {
         list-style: none;
+        margin-right: 20px;
         color: $color-claro; 
     }
     a {

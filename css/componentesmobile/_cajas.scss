@@ -165,20 +165,23 @@
 }
 //Estilos caja grande y fondo de la caja
 .caja--grande {
-	width: 100%;
+	max-width: 100%;
+	height: 100%;
 	margin-right: 20px;
 	.caja--con-fondo__contenido {
-		padding: 20px;
+		padding: 150px 100px 200px;
 	}
 }
 //Estilos caja mediana y fondo de la caja
 .caja--mediana {
-	width: 100%;
+	max-width: 600px;
+	height: 250px;
 }
 //Estilos caja pequeña y fondo de la caja
 .caja--pequena {
     margin-top: 0px;
-	width: 100%;
+	max-width: 300px;
+	max-height: auto;
     transition: transform 0.7s, box-shadow 0.7s;
     &:hover {
         transform: scale(1.02);

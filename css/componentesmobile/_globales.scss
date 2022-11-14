@@ -1,0 +1,91 @@
+//Variables
+$Fuente1: 'Merriweather', sans-serif;
+$Fuente2: 'Roboto', sans-serif;
+$color-fuente-oscuro: #0078e9;
+$color-fuente-claro: #5cb3ff;
+$color-primario: #2479c9;
+$color-claro: #ffffff;
+$color-secundario: #EC7835;
+$color-tema: #383e4d;
+
+//Mixin
+@mixin button {
+    width: 100px;
+    height: 30px;
+    background-color: $color-secundario;
+    color: $color-claro;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 1px;
+    @include titulos($Fuente1);
+    &:hover {
+		box-shadow: 0.2px 0.5px 5px #ffca98;
+	}
+}
+@mixin caja {
+	color: $color-fuente-claro;
+    border-radius: 50px;
+    box-shadow:  5px 5px 21px #13365f,
+             -2px -2px 21px #b1efff;
+}
+
+@mixin titulos($fuente) {
+    @if $fuente==$Fuente1 {
+        font-family: $Fuente1;
+    } @else {
+        font-family: $Fuente2;
+        text-transform: uppercase;
+    }
+}
+
+@mixin form {
+    max-width: 300px;
+    min-width: 250px;
+    max-height: 40px;
+    min-height: 30px;
+    background-color: $color-tema;
+    border: none;
+    margin: 20px;
+    text-align: center;
+    outline: none;
+    &:focus {
+        border: 2px solid $color-fuente-oscuro;
+        background-color: #2c313d ; 
+    }
+    @include titulos($Fuente1);
+    @include font-size(16px);
+    @include caja;
+}
+//Funcion tamaño rem para la fuentes
+@function calculadoraRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+// Tamaño de fuentes
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculadoraRem($size);
+	line-height: calculadoraRem($size)*1.5;
+}
+// Funcion para dar opacidad 
+@function get-opacity($color, $amount) {
+    @return rgba($color, $amount);
+}
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+    #{$header} {
+        font-size: $size;
+        @include titulos($Fuente1);
+        margin: 30px 0;
+    }
+} 
+//Reseteo globales
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 10px 0 10px;
+    background-color: $color-tema;
+    @include titulos($Fuente1);
+    @include font-size(16px);
+}
