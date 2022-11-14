@@ -10,7 +10,7 @@ block contenidos
                         input(type="text" id="name" name="name" placeholder="Nombre" required)
                     li 
                         label(for="Email") 
-                        input(type="email" id="email" pattern=".+@globex\.com" size="30" name="email"  placeholder="Correo" required)
+                        input(type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" name="email"  placeholder="Correo" required)
                     li 
                         label(for="tel")  
                         input(type="tel" id="tel" name="tel" placeholder="Telefono" required)
