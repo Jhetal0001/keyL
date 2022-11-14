@@ -45,6 +45,18 @@ body {
   -webkit-box-shadow: 5px 5px 21px #13365f, -2px -2px 21px #b1efff;
           box-shadow: 5px 5px 21px #13365f, -2px -2px 21px #b1efff;
 }
+.header--principal > img {
+  position: absolute;
+  width: 90%;
+  left: 100px;
+  top: 30px;
+  height: 70px;
+  opacity: 0.05;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  border-radius: 50px;
+}
 .header--principal .logo {
   height: 100px;
   margin-top: -15px;
@@ -58,6 +70,8 @@ body {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  position: relative;
+  z-index: 3;
 }
 .header--principal .logo:hover {
   -webkit-transform: rotate(360deg);
@@ -74,6 +88,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
+  position: relative;
+  z-index: 2;
 }
 .nav--header ul li {
   list-style: none;

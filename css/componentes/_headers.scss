@@ -7,6 +7,17 @@
     height: 70px;
     margin: 30px 10px 20px 10px;
     border-radius: 50px;
+    & > img {
+        position: absolute;
+        width: 90%;
+        left: 100px;
+        top: 30px;
+        height: 70px;
+        opacity: .05;
+        object-fit:cover;
+        z-index: 1;
+        border-radius: 50px;
+    }
     .logo {
         height: 100px;
         margin-top: -15px;
@@ -14,6 +25,8 @@
         @include caja;
         border-radius: 50%;
         transition: transform 1s;
+        position: relative; 
+        z-index: 3;
         &:hover {
             transform: rotate(360deg);
         }
@@ -28,6 +41,8 @@
 .nav--header ul {
     display: flex;
     padding-top: 10px;
+    position: relative;
+    z-index: 2;
     li {
         list-style: none;
         margin-right: 50px;
