@@ -94,4 +94,7 @@
         @include titulos($Fuente1);
         @include font-size(20px);
     }
+    &--search {
+        display: none;
+    }
 }

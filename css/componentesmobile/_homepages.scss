@@ -1,36 +1,56 @@
 .contenedor--home {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: auto;
     margin: auto 10px;
     padding: 20px;
     @include display-grid;
-    @include grid-template-columns(1fr grid-repeat(3));
-    @include grid-template-rows(1fr grid-repeat(2));
+    @include grid-template-columns(repeat(auto-fit, minmax(200px, 1fr)));
     @include grid-column-gap(20px);
     @include grid-row-gap(50px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-auto-flow: row;
+    grid-template-areas: 
+        "grande grande grande"
+        "grande grande grande" 
+        "store sidebar sidebar"
+        "store sidebar sidebar" 
+        "galeria contact comment";
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .caja--grande {
-    @include grid-row(1,3);
-    @include grid-column(1,4);
+    grid-area: grande;
 }
 
 .sidebar--listado {
-    @include grid-row(1,3);
-    @include grid-column(4,5);
+    grid-area: sidebar;
+}
+
+.caja-galeria {
+    grid-area: galeria;
 }
 
 .caja-store {
-    @include grid-row(3,4);
-    @include grid-column(2,3);
+    grid-area: store;
 }
+
 .caja-contact {
-    @include grid-row(3,4);
-    @include grid-column(3,4);
+    grid-area: contact;
 }
 .caja-comment {
-    @include grid-row(3,4);
-    @include grid-column(4,5);
+    grid-area: comment;
+}
+
+@media only screen and (max-width: 550px) {
+    .contenedor--home {
+        @include grid-template-columns(repeat(auto-fit, minmax(100px, 1fr)));
+        grid-template-areas: 
+        "grande grande"
+        "grande grande" 
+        "sidebar sidebar"
+        "sidebar sidebar" 
+        "store galeria" 
+        "contact comment";
+        grid-auto-rows: minmax(150px, auto);
+    }
 }

@@ -2,33 +2,23 @@
 	display: flex;
 }
 .contenedor--cajas::-webkit-scrollbar {
-	height: 50px;
-}
-.contenedor--cajas::-webkit-scrollbar-thumb:hover{
-	background-color: #3d4455;
-	border-radius: 50px;
-}
-.contenedor--cajas::-webkit-scrollbar-track {
-	height: 10px;
-	background-image: url("/images/flecha-left.png"), url("/images/flecha-rigth.png");
-	background-size:contain;
-	background-repeat: no-repeat;
-	background-position: left, right;
+	display: none;
 }
 //Estilos caja padre de las cajas de los productos
 .contenedor--cajas {
-	max-width: 90%;
-	padding: 70px 300px;
+	width: 100%;
+	height: 300px;
 	margin: 0 auto;
 	display: flex;
 	overflow-x: scroll;
     overscroll-behavior-x: contain;
 	scroll-behavior: smooth;
-    scroll-snap-type:x mandatory;
+    scroll-snap-type:x proximity;
 	z-index: 1;
+	align-items: center;
 }
 .caja-flecha {
-	display: flex;
+	display: none;
 	align-items: center;
 	width: 30%;
 	z-index: 2;
@@ -43,7 +33,7 @@
 }
 .flecha__left {
 	position: absolute;
-	left: 15px;
+	left: 0px;
 	height: 80%;
 	background: linear-gradient(90deg, $color-tema 25%,
 				get-opacity($color-tema, .8) 70%, 
@@ -56,7 +46,7 @@
 }
 .flecha__right {
 	position: absolute;
-	right: 15px;
+	right: 0px;
 	height: 80%;
 	background: linear-gradient(270deg, $color-tema 25%,
 				get-opacity($color-tema, .8) 70%, 
@@ -70,46 +60,55 @@
 }
 //Estilos cajas de productos
 .caja {
-	width: 450px;
-	min-width: 300px;
-	height: 400px;
+	width: 250px;
+	min-width: 150px;
+	overflow: hidden;
     text-align: center;
 	scroll-snap-align: center;
     transition: transform .5s;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 20px;
+	margin-right: 20px;
 	z-index: 1;
     @include caja;
     &:hover {
         transform: scale(1.1);
     }
     img {
-        border-radius: 50px 50px 0 0;
+        border-radius: 10vw 10vw 0 0;
         width: 100%;
-        height: 175px;
+		height: 100px;
+		object-fit:cover;
     }
 	&__contenido {
-		padding: 20px;
-		height: 220px;
+		padding: 5px;
+		height: auto;
 		background-color: $color-tema;
-        border-radius: 0 0 50px 50px;
+        border-radius: 0 0 10vw 10vw;
 		display: flex;
     	flex-direction: column;
     	justify-content:space-evenly;
     	align-items: center;
-		& > h3,p {
+		& > h3 {
 			margin: 5px 0;
+			font-size: 14px;
+		}
+		& > p {
+			margin: 0px 0;
+			font-size: 10px;
+			line-height: normal;
+			margin-bottom: 5px;
 		}
 	}
 	&__categoria {
-		height: 30px;
 		color: $color-fuente-oscuro;
 		@include titulos($Fuente1);
+		height: 20%;
 	}
 }
 //Estilos botones
 .contenedor--cajas .caja button {
     @include button;
+	margin-top: 5px;
 }
 //Estilos contenido de la pagina principal
 .contenido {
@@ -122,12 +121,13 @@
 } 
 //Estilos fondo de todas las cajas y su contenido
 .caja--con-fondo {
+	width: 100%;
 	display: block;
 	box-shadow: none;
 	position: relative;
 	overflow: hidden;
 	background-color: $color-primario;
-    border-radius: 50px;
+    border-radius: 10vw;
 	img {
 		display: block;
 		width: 100%;
@@ -137,6 +137,7 @@
 		object-fit:cover;
 	}
 	&__contenido {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
     	justify-content: space-between;
@@ -165,26 +166,40 @@
 }
 //Estilos caja grande y fondo de la caja
 .caja--grande {
-	max-width: 100%;
-	height: 100%;
+	//width: 100%;
 	margin-right: 20px;
 	.caja--con-fondo__contenido {
-		padding: 150px 100px 200px;
+		padding: 20px;
 	}
 }
 //Estilos caja mediana y fondo de la caja
-.caja--mediana {
-	max-width: 600px;
-	height: 250px;
-}
+//.caja--mediana {
+	//width: 100%;
+//}
 //Estilos caja pequeña y fondo de la caja
 .caja--pequena {
     margin-top: 0px;
-	max-width: 300px;
-	max-height: auto;
+	//width: 100%;
     transition: transform 0.7s, box-shadow 0.7s;
     &:hover {
         transform: scale(1.02);
 		@include caja;
     }
+}
+
+@media only screen and (max-width: 550px) {
+	.caja--pequena {
+		& .caja--con-fondo__contenido {
+			padding: 5px;
+			& span {
+				font-size: 16px;
+			}
+			& h2 {
+				@include titulos($Fuente1);
+				font-size: 14px;
+				line-height: normal;
+				margin: 5px;
+			}
+		}
+	}	
 }

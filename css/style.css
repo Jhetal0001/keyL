@@ -168,6 +168,9 @@ body {
   font-size: 1.25rem;
   line-height: 1.875rem;
 }
+.header__busqueda--search {
+  display: none;
+}
 
 .slide {
   display: -webkit-box;
@@ -279,6 +282,8 @@ body {
   border-radius: 50px 50px 0 0;
   width: 100%;
   height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .caja__contenido {
   padding: 20px;
@@ -439,57 +444,63 @@ body {
   display: grid;
   -ms-grid-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  -ms-grid-rows: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 50px;
+  grid-auto-rows: minmax(200px, auto);
   grid-auto-flow: row;
-  /*grid-template-areas: 
-      "grande grande grande sidebar"
-      "galeria galeria galeria sidebar"
-      "galeria store contact comment";*/
+  -ms-grid-rows: auto 50px auto 50px auto;
+      grid-template-areas: "grande grande grande sidebar sidebar" "grande grande grande sidebar sidebar" "galeria store store contact comment";
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
 }
 
-/*
 .caja--grande {
-    grid-area: grande;
-    //@include grid-row(1,2);
-    //@include grid-column(1,4);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: grande;
 }
 
 .sidebar--listado {
-    grid-area: sidebar;
-    //@include grid-row(1,3);
-    //@include grid-column(4,5);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: sidebar;
 }
 
 .caja-galeria {
-    grid-area: galeria;
-    //@include grid-row(2,3);
-    //@include grid-column(1,3);
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: galeria;
 }
 
 .caja-store {
-    grid-area: store;
-    //@include grid-row(2,3);
-    //@include grid-column(1,3);
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: store;
 }
 
 .caja-contact {
-    grid-area: contact;
-    //@include grid-row(3,4);
-    //@include grid-column(3,4);
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+  grid-area: contact;
 }
+
 .caja-comment {
-    grid-area: comment;
-    //@include grid-row(3,4);
-    //@include grid-column(4,5);
-}*/
+  -ms-grid-row: 5;
+  -ms-grid-column: 9;
+  grid-area: comment;
+}
+
 .sidebar--listado {
   max-width: 100%;
   padding: 20px;
   border-radius: 50px;
-  margin: 0 10px 0 0;
+  margin: 0 20px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

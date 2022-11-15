@@ -1,8 +1,10 @@
 .sidebar--listado {
-    max-width: 300px;
+    max-width: 100%;
     padding: 20px;
-    height: 100%;
     border-radius: 50px;
+    margin: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
     @include caja();
     h3 {
         @include titulos($Fuente1);
@@ -10,6 +12,9 @@
     ul {
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     li {
         padding: 10px 0;
@@ -26,5 +31,12 @@
     &__numero {
         margin-right: 20px;
         color: get-opacity($color-fuente-claro, .9);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .sidebar--listado {
+        padding: 10px;
+        margin: 0 0px 0 0px;
     }
 }

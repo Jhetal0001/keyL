@@ -8,7 +8,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&amp;family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/style.css" media="(min-width: 931px)">
+      <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 930px)">
       <script src="https://kit.fontawesome.com/552ebddad2.js"></script>
       <title>Home</title>
     </head>
@@ -24,7 +25,8 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="comment.html">Comment</a></li>
         </ul>
-      </nav><a class="header__busqueda" href="#"><i class="fas fa-search"> </i><span>Search</span></a>
+      </nav><a class="header__busqueda" href="#">
+        <input class="header__busqueda--search" type="search" id="site-search" name="q"><i class="fas fa-search"> </i><span>Search</span></a>
     </header>
     <main class="contenedor--home"><a class="caja--con-fondo caja--grande ">
           <div class="caja__imagen"><img src="../images/FondoRegalos.jpg"></div>
@@ -39,11 +41,11 @@
             <li><a href="#"><span class="sidebar--listado__numero">2. </span><span class="sidebar--listado__titulo">muy buenos profecionales, y muy buenos productos, la atencion es excelente</span></a></li>
             <li><a href="#"><span class="sidebar--listado__numero">3. </span><span class="sidebar--listado__titulo">llengan rapido los productos, ademas que su atencion es excelente</span></a></li>
         </ul>
-      </div><a class="caja--con-fondo caja--mediana caja-galeria">
+      </div><a class="caja--con-fondo caja--pequena caja-galeria">
           <div class="caja__imagen"><img src="../images/fondoComment.jpeg"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Galery</span>
-            <h2>Deseas un nuevo diseño?</h2>
-            <button onclick="location.href='undefined';">Clic here!</button>
+            <h2>Solicita tu diseño!</h2>
+            <button onclick="location.href='';">Clic here!</button>
           </div></a><a class="caja--con-fondo caja--pequena caja-store">
           <div class="caja__imagen"><img src="../images/fondoStore.png"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Store</span>
@@ -52,12 +54,12 @@
           </div></a><a class="caja--con-fondo caja--pequena caja-contact">
           <div class="caja__imagen"><img src="../images/fondoContact.jpg"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Contact</span>
-            <h2>Deseas una atencion mas personalizada?</h2>
+            <h2>Atención personalizada!</h2>
             <button onclick="location.href='contact.html';">Clic here!</button>
           </div></a><a class="caja--con-fondo caja--pequena caja-comment">
           <div class="caja__imagen"><img src="../images/fondoComment.jpeg"></div>
           <div class="caja--con-fondo__contenido"><span class="caja--con-fondo__categoria">Comment</span>
-            <h2>Deseas dejarnos un comentario?</h2>
+            <h2>Dejanos un comentario!</h2>
             <button onclick="location.href='comment.html';">Clic here!</button>
           </div></a>
     </main>

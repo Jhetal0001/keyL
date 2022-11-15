@@ -10,13 +10,14 @@ $color-tema: #383e4d;
 
 //Mixin
 @mixin button {
-    width: 100px;
+    max-width: 100px;
     height: 30px;
     background-color: $color-secundario;
     color: $color-claro;
     border-radius: 20px;
     border: none;
     margin-bottom: 1px;
+    font-size: 2rw;
     @include titulos($Fuente1);
     &:hover {
 		box-shadow: 0.2px 0.5px 5px #ffca98;
@@ -24,7 +25,7 @@ $color-tema: #383e4d;
 }
 @mixin caja {
 	color: $color-fuente-claro;
-    border-radius: 50px;
+    border-radius: 10vw;
     box-shadow:  5px 5px 21px #13365f,
              -2px -2px 21px #b1efff;
 }
