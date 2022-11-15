@@ -16,7 +16,7 @@
         padding-left: 50px;
         opacity: .05;
         object-fit:cover;
-        z-index: 1;
+        z-index: 3;
         border-radius: 50px;
     }
     .logo {
@@ -27,7 +27,7 @@
         border-radius: 50%;
         transition: transform 1s;
         position: relative; 
-        z-index: 3;
+        z-index: 4;
         &:hover {
             transform: rotate(360deg);
         }
@@ -49,7 +49,7 @@
         justify-content: space-evenly;
         padding: 0;
         margin: 0;
-        z-index: 3;
+        z-index: 4;
         li {
             list-style: none;
             transition: transform 0.2s;
@@ -75,7 +75,7 @@
     align-items: center;
     margin-right: 30px;
     transition: transform 0.2s;
-    z-index: 3;
+    z-index: 4;
     text-decoration: none;
     &:hover {
         transform: scale(1.1);
@@ -105,8 +105,37 @@
             height: 100%;
         }
     }
+    .logo:hover ~ .nav--header, .nav--header:active {
+        transform: translateY(25%);
+        height: 150px;
+        ul {
+            height: auto;
+        }
+    }
     .nav--header {
-        display: none;
+        min-width: 89%;
+        height: 1px;
+        display: flex;
+        position: absolute;
+        margin-right: 10px;
+        z-index: 1;
+        top: 45px;
+        left: 20px;
+        background-color: get-opacity($color-primario, .8);
+        border-radius: 0 0 10vw 10vw;
+        padding: 15px;
+        transition: height .5s, transform 1s ;
+        overflow: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        & ul {
+            flex-direction: column;
+            align-items: center;
+            transition: display 1s;
+            height: 0px;
+            overflow: auto;
+        }
     }
     .header__busqueda {
         width: 180px;

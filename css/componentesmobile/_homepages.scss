@@ -1,6 +1,6 @@
 .contenedor--home {
     width: 100%;
-    margin: auto 10px;
+    margin: auto 0px;
     padding: 20px;
     @include display-grid;
     @include grid-template-columns(repeat(auto-fit, minmax(200px, 1fr)));

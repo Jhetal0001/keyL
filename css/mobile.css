@@ -55,7 +55,7 @@ body {
   opacity: 0.05;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 1;
+  z-index: 3;
   border-radius: 50px;
 }
 .header--principal .logo {
@@ -72,7 +72,7 @@ body {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 .header--principal .logo:hover {
   -webkit-transform: rotate(360deg);
@@ -103,7 +103,7 @@ body {
           justify-content: space-evenly;
   padding: 0;
   margin: 0;
-  z-index: 3;
+  z-index: 4;
 }
 .nav--header ul li {
   list-style: none;
@@ -141,7 +141,7 @@ body {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
-  z-index: 3;
+  z-index: 4;
   text-decoration: none;
 }
 .header__busqueda:hover {
@@ -176,8 +176,49 @@ body {
   .header--principal img {
     height: 100%;
   }
+  .logo:hover ~ .nav--header, .nav--header:active {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+    height: 150px;
+  }
+  .logo:hover ~ .nav--header ul, .nav--header:active ul {
+    height: auto;
+  }
   .nav--header {
+    min-width: 89%;
+    height: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    margin-right: 10px;
+    z-index: 1;
+    top: 45px;
+    left: 20px;
+    background-color: rgba(36, 121, 201, 0.8);
+    border-radius: 0 0 10vw 10vw;
+    padding: 15px;
+    -webkit-transition: height 0.5s, -webkit-transform 1s;
+    transition: height 0.5s, -webkit-transform 1s;
+    transition: height 0.5s, transform 1s;
+    transition: height 0.5s, transform 1s, -webkit-transform 1s;
+    overflow: auto;
+  }
+  .nav--header::-webkit-scrollbar {
     display: none;
+  }
+  .nav--header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: display 1s;
+    transition: display 1s;
+    height: 0px;
+    overflow: auto;
   }
   .header__busqueda {
     width: 180px;
@@ -498,7 +539,7 @@ body {
 }
 .contenedor--home {
   width: 100%;
-  margin: auto 10px;
+  margin: auto 0px;
   padding: 20px;
   display: -ms-grid;
   display: grid;
