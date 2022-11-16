@@ -8,6 +8,7 @@
         color: $color-claro;
         align-self: start;
         margin: 20px 0 20px 40px;
+        line-height: 35px;
     }
 }
 
@@ -22,21 +23,22 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
+            padding: 0%;
             & li {
                 list-style: none;
                 input {
                     @include form;
                 }
                 & > textarea {
-                    max-width: 900px;
-                    width: 100%;
+                    width: 70vw;
+                    min-width: 250px;
                     height: 100px;
                     margin: 20px;
                     background-color: $color-tema;
                     border: none;
                     outline: none;
                     color: $color-fuente-oscuro;
-                    padding: 20px 50px;
+                    padding: 3% 7%;
                     @include titulos($Fuente1);
                     @include font-size(16px);
                     @include caja;
@@ -48,6 +50,9 @@
                         display: none;
                     }
                 }
+                & > input[type="Email"] {
+                    width: 250px;
+                }
             }
             & > button {
                 margin-top: 15px;
@@ -58,7 +63,7 @@
 }
 
 .comment__before {
-    width: 80%;
+    width: 90%;
     margin-top: 20px;
     box-shadow: -6px -25px 19px -26px rgba(0,0,0,0.75);
     padding: 30px 0;
@@ -69,7 +74,7 @@
     &--history {
         display: flex;
         flex-direction: column;
-        padding: 20px 80px;
+        padding: 3% 8%;
         max-height: 200px;
         background-color: #2c313d;
         @include caja;
@@ -85,6 +90,9 @@
                 border-bottom: 1px solid rgb(80, 80, 80);
                 a {
                 text-decoration: none;
+                &:visited {
+                    color: $color-fuente-oscuro;
+                }
                 }
             }
         }

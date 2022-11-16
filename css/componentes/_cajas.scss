@@ -1,5 +1,6 @@
 .slide {
 	display: flex;
+	position: relative;
 }
 .contenedor--cajas::-webkit-scrollbar {
 	height: 50px;

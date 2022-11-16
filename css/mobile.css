@@ -832,11 +832,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 30px;
 }
 .contenido--store .caja {
   max-width: 300px;
   min-width: 200px;
-  margin: 50px;
+  margin: 20px;
 }
 .contenido--store .caja button {
   max-width: 100px;
@@ -859,20 +860,28 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 90%;
-  margin: 0 auto;
-  padding: 30px 0;
+  padding: 8% 0 0 8%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .encabezado--con-filtros h2 {
-  margin: 20px 0px 0 20px;
+  padding: 2% 5%;
   font-size: 30px;
   color: #ffffff;
   font-family: "Merriweather", sans-serif;
+  line-height: 30px;
 }
 .encabezado--con-filtros .filtros {
   width: 250px;
   height: 60px;
   padding: 20px;
-  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -895,6 +904,7 @@ body {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+  margin-left: 3px;
 }
 .encabezado--con-filtros a:hover {
   -webkit-transform: scale(1.2);
@@ -916,6 +926,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact__keyl {
@@ -1039,6 +1051,17 @@ body {
   color: #5cb3ff;
 }
 
+@media only screen and (max-width: 550px) {
+  .contact__datos .link a {
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 16px;
+  }
+}
 .comment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1059,6 +1082,7 @@ body {
       -ms-grid-row-align: start;
       align-self: start;
   margin: 20px 0 20px 40px;
+  line-height: 35px;
 }
 
 .comment__input {
@@ -1080,6 +1104,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0%;
 }
 .comment__input form ul li {
   list-style: none;
@@ -1108,15 +1133,15 @@ body {
   background-color: #2c313d;
 }
 .comment__input form ul li > textarea {
-  max-width: 900px;
-  width: 100%;
+  width: 70vw;
+  min-width: 250px;
   height: 100px;
   margin: 20px;
   background-color: #383e4d;
   border: none;
   outline: none;
   color: #0078e9;
-  padding: 20px 50px;
+  padding: 3% 7%;
   font-family: "Merriweather", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -1132,6 +1157,9 @@ body {
 }
 .comment__input form ul li > textarea::-webkit-scrollbar {
   display: none;
+}
+.comment__input form ul li > input[type=Email] {
+  width: 250px;
 }
 .comment__input form ul > button {
   margin-top: 15px;
@@ -1151,7 +1179,7 @@ body {
 }
 
 .comment__before {
-  width: 80%;
+  width: 90%;
   margin-top: 20px;
   -webkit-box-shadow: -6px -25px 19px -26px rgba(0, 0, 0, 0.75);
           box-shadow: -6px -25px 19px -26px rgba(0, 0, 0, 0.75);
@@ -1169,7 +1197,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px 80px;
+  padding: 3% 8%;
   max-height: 200px;
   background-color: #2c313d;
   color: #5cb3ff;
@@ -1192,6 +1220,9 @@ body {
 }
 .comment__before--history-div li a {
   text-decoration: none;
+}
+.comment__before--history-div li a:visited {
+  color: #0078e9;
 }
 
 .comment__before--history-div::-webkit-scrollbar {

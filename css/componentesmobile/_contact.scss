@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact__keyl {
@@ -81,5 +82,16 @@
             }
         }
 
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .contact__datos .link {
+        & a {
+            margin-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
     }
 }
