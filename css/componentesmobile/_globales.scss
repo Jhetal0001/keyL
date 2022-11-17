@@ -25,7 +25,7 @@ $color-tema: #383e4d;
 }
 @mixin caja {
 	color: $color-fuente-claro;
-    border-radius: 10vw;
+    border-radius: 40px;
     box-shadow:  5px 5px 21px #13365f,
              -2px -2px 21px #b1efff;
 }

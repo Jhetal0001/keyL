@@ -4,6 +4,9 @@
     flex-wrap: wrap;
     justify-content: center;
 	margin-top: 30px;
+	i {
+		display: none;
+	}
     .caja {
         max-width: 300px;
         min-width: 200px;
