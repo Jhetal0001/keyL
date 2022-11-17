@@ -21,7 +21,25 @@
     }
 }
 @media only screen and (max-width: 550px) {
-    .disenos .caja img {
-        height: 160px;
+    .disenos .caja {
+        &:hover {
+            position: fixed;
+            top: 0;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            & img {
+                margin-top: 50vw;
+                transform: scale(1.7);
+                max-width: 100%;
+                object-fit: contain;
+            }
+            & .caja__contenido {
+                display: none;
+            }
+        }
+        img {
+            height: 160px;
+        }
     }
 }
