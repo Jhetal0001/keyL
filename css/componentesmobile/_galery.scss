@@ -1,0 +1,27 @@
+.disenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    & .caja {
+        margin: 20px;
+        & img {
+            width: 100%;
+            object-fit: cover;
+            height: 25vw;
+        }
+        &__contenido {
+            & > h3,p {
+                display: none;
+            }
+            & button {
+                @include button;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    .disenos .caja img {
+        height: 160px;
+    }
+}

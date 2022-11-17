@@ -1241,3 +1241,50 @@ body {
   border-radius: 50px;
   background-color: #3d4455;
 }
+
+.disenos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.disenos .caja {
+  margin: 20px;
+}
+.disenos .caja img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 25vw;
+}
+.disenos .caja__contenido > h3, .disenos .caja__contenido p {
+  display: none;
+}
+.disenos .caja__contenido button {
+  max-width: 100px;
+  height: 30px;
+  background-color: #EC7835;
+  color: #ffffff;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 1px;
+  font-size: 2rw;
+  font-family: "Merriweather", sans-serif;
+}
+.disenos .caja__contenido button:hover {
+  -webkit-box-shadow: 0.2px 0.5px 5px #ffca98;
+          box-shadow: 0.2px 0.5px 5px #ffca98;
+}
+
+@media only screen and (max-width: 550px) {
+  .disenos .caja img {
+    height: 160px;
+  }
+}
