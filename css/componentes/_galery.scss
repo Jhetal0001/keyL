@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    i {
+        display: none;
+    }
     & .caja {
         display: flex;
         flex-direction: column;

@@ -27,6 +27,9 @@
 	scroll-behavior: smooth;
     scroll-snap-type:x mandatory;
 	z-index: 1;
+	i {
+		display: none;
+	}
 }
 .caja-flecha {
 	display: flex;

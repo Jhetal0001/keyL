@@ -3,6 +3,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+	i {
+		display: none;
+	}
     .caja {
         max-width: 300px;
         min-width: 200px;

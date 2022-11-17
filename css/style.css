@@ -210,6 +210,9 @@ body {
       scroll-snap-type: x mandatory;
   z-index: 1;
 }
+.contenedor--cajas i {
+  display: none;
+}
 
 .caja-flecha {
   display: -webkit-box;
@@ -682,6 +685,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.contenido--store i {
+  display: none;
+}
 .contenido--store .caja {
   max-width: 300px;
   min-width: 200px;
@@ -1070,6 +1076,9 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.disenos i {
+  display: none;
 }
 .disenos .caja {
   display: -webkit-box;
