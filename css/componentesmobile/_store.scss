@@ -14,18 +14,22 @@
         button {
             @include button;
         }
+		&:hover {
+			margin: 0;
+			left: 20px;
+		}
     }
 }
 .encabezado--con-filtros {
 	display: flex;
 	width: 90%;
-	padding: 8% 0 0 8%;
+	padding: 0 0 0 8%;
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 0;
 	justify-content: center;
 	h2 {
-		padding: 2% 5%;
+		padding: 0 5% 0 0;
 		font-size: 30px;
         color: $color-claro;
 		@include titulos($Fuente1);

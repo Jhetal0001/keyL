@@ -56,15 +56,19 @@
                 object-fit: scale-down;
             }
             & .caja__contenido {
-               margin-top: 30vw;
-               & button {
-                display: block;
-                margin-top: 5vw;
-               }
+                margin-top: 30vw;
+                & button {
+                    display: block;
+                    margin-top: 5vw;
+                }
+                & span {
+                    font-size: 20px;
+                }
             }
         }
         img {
             height: 75px;
+            transition: transform .5s;
         }
         &__contenido {
             & span {
