@@ -22,14 +22,14 @@ mixin caja--con-fondo-pequena(clase, imagen, categoria, titulo, contenido, link)
             h2=titulo
             button(onclick="location.href='"+link+"';") Clic here!
 
-mixin caja(id, imagen, categoria, titulo, contenido)
+mixin caja(id, imagen, categoria, titulo, contenido, button)
     .caja(id=+id)
         .caja__imagen: img(src="../images/"+imagen)
         .caja__contenido
             span.caja__categoria=categoria
             h3=titulo
             p=contenido
-            button Comprar	
+            button=button	
             
 mixin listado-categoria(numero,titulo)
     li: a(href="#")

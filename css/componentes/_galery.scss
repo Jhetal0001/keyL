@@ -1,0 +1,33 @@
+.disenos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    & .caja {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        height: 20vw;
+        margin: 20px;
+        & img {
+            object-fit: cover;
+            height: 15vw;
+        }
+        &__contenido {
+            padding: 20px;
+            height: 20%;
+            background-color: $color-tema;
+            border-radius: 0 0 50px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items: center;
+            & > h3,p {
+                display: none;
+            }
+            & button {
+                @include button;
+            }
+        }
+    }
+}

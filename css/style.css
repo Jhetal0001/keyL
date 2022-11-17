@@ -1057,3 +1057,70 @@ body {
   border-radius: 50px;
   background-color: #3d4455;
 }
+
+.disenos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.disenos .caja {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20vw;
+  height: 20vw;
+  margin: 20px;
+}
+.disenos .caja img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 15vw;
+}
+.disenos .caja__contenido {
+  padding: 20px;
+  height: 20%;
+  background-color: #383e4d;
+  border-radius: 0 0 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.disenos .caja__contenido > h3, .disenos .caja__contenido p {
+  display: none;
+}
+.disenos .caja__contenido button {
+  width: 100px;
+  height: 30px;
+  background-color: #EC7835;
+  color: #ffffff;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 1px;
+  font-family: "Merriweather", sans-serif;
+}
+.disenos .caja__contenido button:hover {
+  -webkit-box-shadow: 0.2px 0.5px 5px #ffca98;
+          box-shadow: 0.2px 0.5px 5px #ffca98;
+}
